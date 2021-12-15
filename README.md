@@ -20,14 +20,14 @@ Program should run on UBUNTU OS <br/>
 ![](graph.png)
 
 ## Results and Observation
-Results shows that the Sequence code is faster than the parallel code in small i <br/>
+Results show that the Sequence code is faster than the parallel code in small i <br/>
 And this happened due to the overhead of the communication between the processes<br/>
 <br/>
 And this overhead increases if we increase parallelism (the number of processes)<br/>
 <br/>
 The problem is simple and done very quickly so that the parallelism of this code makes overheads as the communication between processes and sending the data between them takes long time compared to the operation it should do.<br/>
 
-The Parallelism has advantage in case in complex problems that takes long time in sequence programming so the overhead of communication of the processes is very tiny compared to the operation that every process do.<br/>
+The Parallelism has advantage in case of complex problems that take long time in sequence programming so the overhead of communication of the processes is very tiny compared to the operation that every process do.<br/>
 
 The speedup hits the hardware boundary at processes more than 4 because the computer which runs the code has only 4 cores in its processor.<br/>
 
