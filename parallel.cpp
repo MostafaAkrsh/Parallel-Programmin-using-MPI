@@ -38,7 +38,7 @@ cin>>x>>iteration;
 double start_time= MPI_Wtime();
 
 //Broadcast to all processes, the number of segments you want
-MPI_Bcast(&x , 1, MPI_INT, 0, MPI_COMM_WORLD);
+MPI_Bcast(&x , 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 MPI_Bcast(&iteration , 1, MPI_INT, 0, MPI_COMM_WORLD);
 
 //Define total value that gather all the values from the processes
@@ -94,7 +94,7 @@ int k = rank;
 int x , iteration = 0;
 
 // receive form ronk 0 x and iteration
-MPI_Bcast(&x , 1, MPI_INT, 0, MPI_COMM_WORLD);
+MPI_Bcast(&x , 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 MPI_Bcast(&iteration , 1, MPI_INT, 0, MPI_COMM_WORLD);
 
 // if rank is bigger than number of  iterations don't do anything
